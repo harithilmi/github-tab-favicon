@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <p id="notice">Loading…</p>
+    <div id="main" hidden>
+      <header>
+        <img id="preview" alt="" width="48" height="48" />
+        <div>
+          <strong id="repo"></strong>
+          <small id="source"></small>
+        </div>
+      </header>
+
+      <label id="drop" class="drop">
+        Drop, paste (⌘V) or <u>choose</u> an image
+        <input id="file" type="file" accept="image/*,.ico,.svg" hidden />
+      </label>
+
+      <h2>From this repo</h2>
+      <input id="search" type="search" placeholder="Filter, e.g. logo, public/…" />
+      <div id="grid"></div>
+
+      <h2>Letter or emoji</h2>
+      <div class="row">
+        <input id="text" type="text" />
+        <input id="color" type="color" />
+        <button id="apply-text">Use</button>
+      </div>
+
+      <button id="reset" class="link">Reset to auto</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; font: 13px system-ui, sans-serif; }
+body { width: 340px; margin: 0; padding: 12px; }
+header { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+header div { display: flex; flex-direction: column; min-width: 0; }
+header small, #notice, #grid:not(:has(button)) { opacity: 0.65; }
+#repo, header small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.6; margin: 14px 0 6px; }
+input, button { font: inherit; }
+input[type='search'], #text { box-sizing: border-box; padding: 5px 8px; border: 1px solid #8884; border-radius: 6px; background: transparent; }
+input[type='search'] { width: 100%; margin-bottom: 8px; }
+.drop { display: block; padding: 14px; text-align: center; border: 1.5px dashed #8888; border-radius: 10px; cursor: pointer; }
+.drop.over { border-color: #f97316; background: #f9731618; }
+#grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-height: 220px; overflow-y: auto; }
+#grid button { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px; border: 1px solid #8883; border-radius: 8px; background: transparent; cursor: pointer; min-width: 0; }
+#grid button:hover { border-color: #8889; }
+#grid button[aria-pressed='true'] { border-color: #f97316; }
+#grid button.broken { opacity: 0.35; }
+#grid img { width: 32px; height: 32px; object-fit: contain; }
+#grid span { font-size: 10px; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row { display: flex; gap: 6px; }
+#text { flex: 1; }
+#color { width: 36px; height: 30px; padding: 0; border: none; background: none; }
+.row button { padding: 0 12px; border-radius: 6px; border: 1px solid #8886; background: transparent; cursor: pointer; }
+.link { margin-top: 14px; padding: 0; border: none; background: none; color: #f97316; cursor: pointer; }

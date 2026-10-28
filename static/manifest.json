@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Tab Favicon",
+  "version": "0.1.0",
+  "description": "GitHub mark + the repo's own icon in the tab, and an orange dot on localhost dev servers.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tab icon for this repo"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "dev.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
